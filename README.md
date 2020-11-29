@@ -1,0 +1,2 @@
+# IntAlk
+Internetalkalmazásfejlesztésre a beadandó
