@@ -8,6 +8,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<c:if test="${ sessionScope.logged != null}">
+    <c:redirect url="movies.jsp"/>
+</c:if>    
+
 <sql:setDataSource 
    var="mydb" 
     url="jdbc:ucanaccess://C:/Users/Judit/Documents/moviedb.accdb" 
@@ -29,7 +33,7 @@
 <body>
   <div class="login-page">
     <div class="form">
-      <h2>Film pontozás</h2>
+      <h2>Bejelentkezés</h2>
       <form class="login" action="check.jsp" method="POST">
         <input type="text" name="username" placeholder="Felhasználónév" />
         <input type="password" name="password" placeholder="Jelszó" />

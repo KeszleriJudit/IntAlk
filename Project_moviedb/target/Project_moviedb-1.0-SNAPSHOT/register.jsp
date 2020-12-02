@@ -4,7 +4,9 @@
     Created on : 2020. nov. 24., 13:35:43
     Author     : Asus
 --%>
-
+<c:if test="${ sessionScope.logged != null}">
+    <c:redirect url="movies.jsp"/>
+</c:if>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="hu">
@@ -50,6 +52,7 @@
                     ${param.errormsg}
                 </c:if> 
                 <input type="submit" class="gomb" name="register" value="Regisztráció">
+                <p class="message">Már regisztrált? <a href="login.jsp">Bejelentkezés</a></p>
             </form>
         </div>
     </div>

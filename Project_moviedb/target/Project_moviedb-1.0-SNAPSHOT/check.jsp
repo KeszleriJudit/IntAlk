@@ -16,6 +16,7 @@
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
 %>
+
 <%!
 //SHA-1 titkosítás, forrás: https://stackoverflow.com/questions/4895523/java-string-to-sha1
 private static String encryptPassword(String password)
@@ -110,7 +111,7 @@ private static String byteToHex(final byte[] hash)
                             VALUES ('${param.username}', '<%=sha1pwd%>')
                         </sql:update> 
                         <jsp:forward page="login.jsp">
-                            <jsp:param name="errormsg" value="<h5 class=\"valid\">Sikeresen regisztráció!</h5>"/>
+                            <jsp:param name="errormsg" value="<h5 class=\"valid\">Sikeres regisztráció!</h5>"/>
                         </jsp:forward>                             
                    </c:otherwise>
                 </c:choose>         
