@@ -64,7 +64,7 @@
         <div class="container-fluid">
             <br>
             <h1>Filmek</h1>
-            <table  class="table col-12" style="align-content: center">
+            <table  class="table col-12" style="align-content: center;">
                 <thead class="thead-dark">
                     <tr >
                         <th scope="col">Film címe</td>
@@ -79,11 +79,11 @@
                         <% int sum = 0;
                               int count = 0;%>
                     <form method="post" action="helpers.jsp">
-                        <tr>
-                            <td><c:out value="${sor.title}"/></td>
-                            <td><c:out value="${sor.year}"/></td>
-                            <td><c:out value="${sor.category}"/></td>
-                            <td>
+                        <tr >
+                            <td style=" vertical-align:middle;"><c:out value="${sor.title}"/></td>
+                            <td style=" vertical-align:middle;"><c:out value="${sor.year}"/></td>
+                            <td style=" vertical-align:middle;"><c:out value="${sor.category}"/></td>
+                            <td style=" vertical-align:middle;">
                                 <sql:query var="ratings" dataSource="${mydb}">
                                     SELECT * FROM rating WHERE filmID = ${sor.filmID}
                                 </sql:query>
